@@ -38,7 +38,7 @@ final class ViewController: UICollectionViewController, UIScrollViewDelegate {
         super.init(collectionViewLayout: layout)
     }
 
-    convenience required init(coder aDecoder: NSCoder) {
+    convenience required init?(coder aDecoder: NSCoder) {
         self.init()
     }
 
@@ -47,9 +47,9 @@ final class ViewController: UICollectionViewController, UIScrollViewDelegate {
 
         setupUI()
         setupConnectivityObserver()
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         if let slidesData = NSData(contentsOfFile: documentsPath.stringByAppendingPathComponent("slides")) {
-            slides = flatMap(Slide.slidesfromData(slidesData)) { compact($0) }
+            slides = Slide.slidesfromData(slidesData).flatMap { compact($0) }
         }
     }
 
@@ -131,7 +131,7 @@ final class ViewController: UICollectionViewController, UIScrollViewDelegate {
     // MARK: UIScrollViewDelegate
 
     private func currentSlide() -> UInt {
-        return map(collectionView) { cv in
+        return collectionView.map { cv in
             let cvLayout = cv.collectionViewLayout as! UICollectionViewFlowLayout
             return UInt(round(cv.contentOffset.x / cvLayout.itemSize.width))
             } ?? 0

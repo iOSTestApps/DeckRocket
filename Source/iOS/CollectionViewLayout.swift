@@ -20,7 +20,7 @@ final class CollectionViewLayout: UICollectionViewFlowLayout {
         minimumLineSpacing = 0
     }
 
-    required convenience init(coder aDecoder: NSCoder) {
+    required convenience init?(coder aDecoder: NSCoder) {
         self.init()
     }
 }

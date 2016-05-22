@@ -38,7 +38,7 @@ struct Slide {
     }
 
     init?(dictionary: NSDictionary) {
-        let image = flatMap(dictionary["image"] as? NSData) { Image(data: $0) }
+        let image = (dictionary["image"] as? NSData).flatMap { Image(data: $0) }
         let notes = dictionary["notes"] as? String
         if let image = image {
             self.init(image: image, notes: notes)
@@ -48,8 +48,8 @@ struct Slide {
     }
 
     static func slidesfromData(data: NSData) -> [Slide?]? {
-        return flatMap(NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [NSDictionary]) { data in
-            map(data) {
+        return (NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [NSDictionary]).flatMap { data in
+            data.map {
                 if let imageData = $0["image"] as? NSData, image = Image(data: imageData) {
                     let notes = $0["notes"] as? String
                     return Slide(image: image, notes: notes)

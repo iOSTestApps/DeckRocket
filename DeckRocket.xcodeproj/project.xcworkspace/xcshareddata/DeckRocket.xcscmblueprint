@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "257A9D6ACA1FFF24A30E3669487758B09ED82057",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "257A9D6ACA1FFF24A30E3669487758B09ED82057" : 0,
+    "D3239580941E345AB636F3B382D35AC2CB008F45" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A2669458-2221-46F4-AEA3-FFA57A0DE355",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "257A9D6ACA1FFF24A30E3669487758B09ED82057" : "DeckRocket\/",
+    "D3239580941E345AB636F3B382D35AC2CB008F45" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DeckRocket",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DeckRocket.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:iOSTestApps\/DeckRocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "257A9D6ACA1FFF24A30E3669487758B09ED82057"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BuddyBuild\/BB.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D3239580941E345AB636F3B382D35AC2CB008F45"
+    }
+  ]
+}
